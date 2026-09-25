@@ -41,7 +41,12 @@ transparent background:
 - `zenzia-logo.png` — full lockup, deep green (`#294B32`), for light backgrounds
 - `zenzia-logo-light.png` — same lockup in cream, for dark backgrounds
 - `zenzia-mark.png` / `zenzia-mark-light.png` — leaf and ripples only, no wordmark
-- `favicon.png`, `favicon-32.png`
+- `favicon.svg` — the leaf alone, green on a light browser theme and cream on a
+  dark one (a `prefers-color-scheme` rule inside the SVG). The veins are knocked
+  out of a filled leaf so the shape still holds together at 16px, where the
+  original line art turns to mush.
+- `favicon-32.png` — green fallback for anything that won't take an SVG icon
+- `apple-touch-icon.png` — 180px, cream leaf on deep green (iOS needs it opaque)
 
 Brand colors: cream `#D7D5C4` (page tint `#E6E4D6`), deep green `#294B32`,
 accent pink `#FF65C5`.
