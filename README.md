@@ -48,11 +48,19 @@ accent pink `#FF65C5`.
 
 ## Deploying
 
-`.github/workflows/azure-static-web-apps.yml` uploads the repo root on every
-push to `main`. Before the first deploy, set the workflow's
-`azure_static_web_apps_api_token` to the secret name Azure generated for this
-Static Web App — Azure normally commits its own workflow file when you link the
-GitHub repo, in which case delete this one and keep Azure's.
+Azure's own workflow —
+`.github/workflows/azure-static-web-apps-delightful-ground-07edb7b0f.yml` —
+uploads the repo root on every push to `main`. It was generated when the
+Static Web App was linked to this repo and already carries the right
+deployment-token secret, so it needs no edits. Don't add a second workflow
+alongside it: a hand-written one won't have that secret and the job fails with
+`deployment_token was not provided`.
+
+| | |
+| --- | --- |
+| Resource | `main-website` in resource group `zenzia` |
+| Subscription | Pay-As-You-Go |
+| URL | https://delightful-ground-07edb7b0f.4.azurestaticapps.net |
 
 `staticwebapp.config.json` sets caching and the navigation fallback.
 
