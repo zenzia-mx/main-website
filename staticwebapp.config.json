@@ -1,0 +1,19 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/options/*", "*.{css,js,png,webp,svg,ico}"]
+  },
+  "globalHeaders": {
+    "cache-control": "public, max-age=3600, must-revalidate"
+  },
+  "routes": [
+    {
+      "route": "/assets/*",
+      "headers": { "cache-control": "public, max-age=604800, immutable" }
+    }
+  ],
+  "mimeTypes": {
+    ".webp": "image/webp",
+    ".json": "application/json"
+  }
+}
