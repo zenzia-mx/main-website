@@ -6,153 +6,22 @@
   <title>Aviso de Privacidad · Tarjeta de Lealtad</title>
   <meta name="description" content="Aviso de privacidad y términos de uso de la tarjeta de lealtad digital de Zenzia.">
   <meta name="theme-color" content="#1e3a26">
+  <link rel="alternate" hreflang="es" href="https://zenzia.mx/privacidad/">
+  <link rel="alternate" hreflang="en" href="https://zenzia.mx/privacidad/en/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap">
-  <style>
-    :root {
-      --ink: #14261a;
-      --green: #1e3a26;
-      --green-lift: #2f5639;
-      --cream: #f2f0e2;
-      --surface: #fbfaf4;
-      --muted: #4f5e53;
-      --line: rgba(30, 58, 38, 0.14);
-      --callout: #e7ebdf;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--ink);
-      font: 400 1.0625rem/1.65 "Jost", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Same deep-green field as the home page. */
-    .hero {
-      padding: max(32px, env(safe-area-inset-top)) 16px 40px;
-      background: radial-gradient(130% 100% at 50% 20%, var(--green-lift) 0%, var(--green) 45%, var(--ink) 100%);
-      color: var(--cream);
-      text-align: center;
-    }
-    .hero a { display: inline-block; }
-    .logo {
-      display: block;
-      width: 112px;
-      height: auto;
-      margin: 0 auto 24px;
-      filter: drop-shadow(0 0 28px rgba(242, 240, 226, 0.14));
-    }
-    h1 {
-      max-width: 620px;
-      margin: 0 auto 12px;
-      font-size: clamp(1.55rem, 6vw, 2.1rem);
-      line-height: 1.2;
-      font-weight: 500;
-      letter-spacing: -0.005em;
-      text-wrap: balance;
-    }
-    .lead {
-      max-width: 520px;
-      margin: 0 auto;
-      font-size: 1.0625rem;
-      opacity: 0.8;
-      text-wrap: balance;
-    }
-
-    .page {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 8px 16px max(40px, env(safe-area-inset-bottom));
-    }
-    section {
-      margin-top: 16px;
-      padding: 24px 20px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-    }
-    h2 {
-      display: flex;
-      gap: 12px;
-      align-items: baseline;
-      margin: 0 0 12px;
-      color: var(--green);
-      font-size: 1.1875rem;
-      line-height: 1.35;
-      font-weight: 600;
-    }
-    h2 .n {
-      flex: none;
-      display: inline-grid;
-      place-items: center;
-      width: 1.6rem;
-      height: 1.6rem;
-      border-radius: 50%;
-      background: var(--green);
-      color: var(--cream);
-      font-size: 0.8125rem;
-      font-weight: 600;
-      transform: translateY(-1px);
-    }
-    h3 { margin: 20px 0 6px; color: var(--green); font-size: 1rem; font-weight: 600; }
-    p { margin: 0 0 12px; }
-    p:last-child, ul:last-child, ol:last-child { margin-bottom: 0; }
-    ul, ol { margin: 0 0 12px; padding-left: 1.25rem; }
-    li + li { margin-top: 6px; }
-    li::marker { color: var(--green-lift); }
-    strong { font-weight: 600; }
-    a { color: var(--green); text-underline-offset: 3px; overflow-wrap: anywhere; }
-
-    .note {
-      margin-top: 16px;
-      padding: 12px 14px;
-      border-radius: 10px;
-      background: var(--cream);
-      color: var(--muted);
-      font-size: 0.9375rem;
-    }
-    .note strong { color: var(--ink); }
-
-    .callout {
-      margin-top: 4px;
-      padding: 18px 16px;
-      background: var(--callout);
-      border: 1px solid rgba(30, 58, 38, 0.2);
-      border-left: 4px solid var(--green);
-      border-radius: 10px;
-    }
-    .callout > p:first-child { font-size: 1.0625rem; }
-    .platform { margin-top: 16px; }
-    .platform h3 { margin-top: 0; }
-    .platform ol li::marker { font-weight: 600; }
-    .hint { margin: 8px 0 0; font-size: 0.9375rem; color: var(--muted); }
-    .hint strong { color: var(--ink); }
-
-    footer {
-      padding: 28px 4px 0;
-      text-align: center;
-      font-size: 0.875rem;
-      color: var(--muted);
-    }
-    footer p { margin: 0 0 4px; }
-
-    @media (min-width: 600px) {
-      .hero { padding-top: 48px; padding-bottom: 56px; }
-      .logo { width: 132px; }
-      .page { padding-top: 16px; }
-      section { padding: 28px 28px; }
-      .callout { padding: 22px 22px; }
-    }
-  </style>
+  <link rel="stylesheet" href="/privacidad/styles.css">
 </head>
 <body>
   <header class="hero">
+    <nav class="lang" aria-label="Idioma">
+      <a href="/privacidad/" lang="es" aria-current="page">ES</a>
+      <a href="/privacidad/en/" lang="en" hreflang="en">EN</a>
+    </nav>
     <a href="/"><img class="logo" src="/assets/zenzia-logo-light.png" alt="Zenzia · Barra de infusiones" width="722" height="928"></a>
     <h1>Aviso de Privacidad y Términos de Uso – Tarjeta de Lealtad Digital</h1>
     <p class="lead">Tu privacidad y el control de tus datos son lo más importante para nosotros.</p>
