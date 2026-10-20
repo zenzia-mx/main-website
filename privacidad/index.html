@@ -5,51 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Aviso de Privacidad · Tarjeta de Lealtad</title>
   <meta name="description" content="Aviso de privacidad y términos de uso de la tarjeta de lealtad digital de Zenzia.">
-  <meta name="theme-color" content="#f5f5f4">
+  <meta name="theme-color" content="#1e3a26">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap">
   <style>
     :root {
-      --bg: #f5f5f4;
-      --surface: #ffffff;
-      --ink: #1c1c1c;
-      --muted: #5c5c5a;
-      --line: #e4e4e1;
-      --callout: #efefec;
+      --ink: #14261a;
+      --green: #1e3a26;
+      --green-lift: #2f5639;
+      --cream: #f2f0e2;
+      --surface: #fbfaf4;
+      --muted: #4f5e53;
+      --line: rgba(30, 58, 38, 0.14);
+      --callout: #e7ebdf;
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
-      background: var(--bg);
+      background: var(--cream);
       color: var(--ink);
-      font: 400 1.0625rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font: 400 1.0625rem/1.65 "Jost", "Avenir Next", "Segoe UI", system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
+
+    /* Same deep-green field as the home page. */
+    .hero {
+      padding: max(32px, env(safe-area-inset-top)) 16px 40px;
+      background: radial-gradient(130% 100% at 50% 20%, var(--green-lift) 0%, var(--green) 45%, var(--ink) 100%);
+      color: var(--cream);
+      text-align: center;
+    }
+    .hero a { display: inline-block; }
+    .logo {
+      display: block;
+      width: 112px;
+      height: auto;
+      margin: 0 auto 24px;
+      filter: drop-shadow(0 0 28px rgba(242, 240, 226, 0.14));
+    }
+    h1 {
+      max-width: 620px;
+      margin: 0 auto 12px;
+      font-size: clamp(1.55rem, 6vw, 2.1rem);
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: -0.005em;
+      text-wrap: balance;
+    }
+    .lead {
+      max-width: 520px;
+      margin: 0 auto;
+      font-size: 1.0625rem;
+      opacity: 0.8;
+      text-wrap: balance;
+    }
+
     .page {
       max-width: 680px;
       margin: 0 auto;
-      padding: max(24px, env(safe-area-inset-top)) 16px max(40px, env(safe-area-inset-bottom));
+      padding: 8px 16px max(40px, env(safe-area-inset-bottom));
     }
-
-    header { padding: 16px 0 28px; }
-    .brand {
-      margin: 0 0 12px;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(1.6rem, 6vw, 2.1rem);
-      line-height: 1.2;
-      font-weight: 700;
-      letter-spacing: -0.015em;
-      text-wrap: balance;
-    }
-    .lead { margin: 0; font-size: 1.125rem; color: var(--muted); }
-
     section {
       margin-top: 16px;
       padding: 24px 20px;
@@ -62,9 +82,10 @@
       gap: 12px;
       align-items: baseline;
       margin: 0 0 12px;
+      color: var(--green);
       font-size: 1.1875rem;
       line-height: 1.35;
-      font-weight: 650;
+      font-weight: 600;
     }
     h2 .n {
       flex: none;
@@ -73,25 +94,26 @@
       width: 1.6rem;
       height: 1.6rem;
       border-radius: 50%;
-      background: var(--ink);
-      color: var(--surface);
+      background: var(--green);
+      color: var(--cream);
       font-size: 0.8125rem;
-      font-weight: 700;
+      font-weight: 600;
       transform: translateY(-1px);
     }
-    h3 { margin: 20px 0 6px; font-size: 1rem; font-weight: 650; }
+    h3 { margin: 20px 0 6px; color: var(--green); font-size: 1rem; font-weight: 600; }
     p { margin: 0 0 12px; }
     p:last-child, ul:last-child, ol:last-child { margin-bottom: 0; }
     ul, ol { margin: 0 0 12px; padding-left: 1.25rem; }
     li + li { margin-top: 6px; }
-    strong { font-weight: 650; }
-    a { color: var(--ink); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    li::marker { color: var(--green-lift); }
+    strong { font-weight: 600; }
+    a { color: var(--green); text-underline-offset: 3px; overflow-wrap: anywhere; }
 
     .note {
       margin-top: 16px;
       padding: 12px 14px;
       border-radius: 10px;
-      background: var(--bg);
+      background: var(--cream);
       color: var(--muted);
       font-size: 0.9375rem;
     }
@@ -101,14 +123,14 @@
       margin-top: 4px;
       padding: 18px 16px;
       background: var(--callout);
-      border: 1px solid #d9d9d5;
-      border-left: 4px solid var(--ink);
+      border: 1px solid rgba(30, 58, 38, 0.2);
+      border-left: 4px solid var(--green);
       border-radius: 10px;
     }
     .callout > p:first-child { font-size: 1.0625rem; }
     .platform { margin-top: 16px; }
     .platform h3 { margin-top: 0; }
-    .platform ol li::marker { font-weight: 700; }
+    .platform ol li::marker { font-weight: 600; }
     .hint { margin: 8px 0 0; font-size: 0.9375rem; color: var(--muted); }
     .hint strong { color: var(--ink); }
 
@@ -121,24 +143,28 @@
     footer p { margin: 0 0 4px; }
 
     @media (min-width: 600px) {
-      .page { padding-top: 48px; }
+      .hero { padding-top: 48px; padding-bottom: 56px; }
+      .logo { width: 132px; }
+      .page { padding-top: 16px; }
       section { padding: 28px 28px; }
       .callout { padding: 22px 22px; }
     }
   </style>
 </head>
 <body>
+  <header class="hero">
+    <a href="/"><img class="logo" src="/assets/zenzia-logo-light.png" alt="Zenzia · Barra de infusiones" width="722" height="928"></a>
+    <h1>Aviso de Privacidad y Términos de Uso – Tarjeta de Lealtad Digital</h1>
+    <p class="lead">Tu privacidad y el control de tus datos son lo más importante para nosotros.</p>
+  </header>
+
   <main class="page">
-    <header>
-      <p class="brand">Zenzia</p>
-      <h1>Aviso de Privacidad y Términos de Uso – Tarjeta de Lealtad Digital</h1>
-      <p class="lead">Tu privacidad y el control de tus datos son lo más importante para nosotros.</p>
-    </header>
 
     <section aria-labelledby="s1">
       <h2 id="s1"><span class="n">1</span> ¿Quién recopila tus datos y qué información solicitamos?</h2>
       <p><strong>Zenzia</strong>, con domicilio en Epigmenio González 500, Fracc. San Pablo, 76130 Santiago de Querétaro, Qro., es el responsable del tratamiento de tus datos personales.</p>
-      <p>Al registrarte en nuestro programa de lealtad, únicamente solicitamos datos básicos como tu <strong>nombre, teléfono y/o correo electrónico</strong>. No solicitamos datos sensibles ni datos bancarios.</p>
+      <p>Para obtener tu tarjeta de lealtad <strong>no te pedimos ningún dato personal</strong>: ni nombre, ni teléfono, ni correo electrónico, ni datos sensibles o bancarios.</p>
+      <p>Solo guardamos lo necesario para que la tarjeta funcione: un número de tarjeta anónimo, tus puntos, sellos y recompensas, y el identificador técnico que tu teléfono nos envía para poder actualizar la tarjeta y mandarte notificaciones.</p>
       <p class="note"><strong>Nota legal:</strong> Apple Wallet y Google Wallet no recopilan ni tienen acceso a tu información personal; actúan únicamente como el contenedor digital de tu tarjeta.</p>
     </section>
 
@@ -183,9 +209,9 @@
 
     <section aria-labelledby="s4">
       <h2 id="s4"><span class="n">4</span> Baja del programa y Derechos ARCO</h2>
-      <p>Si deseas eliminar por completo tu cuenta de nuestro programa de lealtad y que borremos tus datos de nuestro sistema, envía un correo a <a href="mailto:contacto@zenzia.mx?subject=Baja%20de%20Tarjeta%20de%20Lealtad">contacto@zenzia.mx</a> con el asunto <strong>“Baja de Tarjeta de Lealtad”</strong>.</p>
+      <p>Si deseas darte de baja del programa de lealtad y que borremos tu tarjeta y tus datos de nuestro sistema, envía un correo a <a href="mailto:contacto@zenzia.mx?subject=Baja%20de%20Tarjeta%20de%20Lealtad">contacto@zenzia.mx</a> con el asunto <strong>“Baja de Tarjeta de Lealtad”</strong>.</p>
       <p>También puedes simplemente borrar la tarjeta directamente de tu aplicación Wallet: dejarás de recibir notificaciones de inmediato. Para que además eliminemos tus datos de nuestro sistema, envíanos el correo anterior.</p>
-      <p>En ese mismo correo puedes ejercer tus <strong>Derechos ARCO</strong>: <strong>A</strong>cceder a tus datos, <strong>R</strong>ectificarlos, <strong>C</strong>ancelarlos u <strong>O</strong>ponerte a su uso. Indica tu nombre, el teléfono o correo con el que te registraste y lo que solicitas. Te responderemos en un plazo máximo de 20 días hábiles.</p>
+      <p>En ese mismo correo puedes ejercer tus <strong>Derechos ARCO</strong>: <strong>A</strong>cceder a tus datos, <strong>R</strong>ectificarlos, <strong>C</strong>ancelarlos u <strong>O</strong>ponerte a su uso. Como no te pedimos datos personales, para identificar tu tarjeta incluye el número que aparece en ella o una captura de pantalla, y lo que solicitas. Te responderemos en un plazo máximo de 20 días hábiles.</p>
     </section>
 
     <section aria-labelledby="s5">
